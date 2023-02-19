@@ -4,4 +4,6 @@ if status is-interactive
 		exec tmux
 end
 
+set -U fish_greeting
+
 starship init fish | source
