@@ -4,11 +4,11 @@ Dotfiles
 
 This repository contains my personal dotfiles for configuring my development environment. These dotfiles include configuration files for the following applications:
 
-    [TMUX](https://github.com/tmux/tmux)
-    [kitty](https://github.com/kovidgoyal/kitty)
-    [nvim](https://github.com/neovim/neovim)
-    [i3](https://i3wm.org/)
-    [fish](https://fishshell.com/)
+    (TMUX)[https://github.com/tmux/tmux]
+    (kitty)[https://github.com/kovidgoyal/kitty]
+    (nvim)[https://github.com/neovim/neovim]
+    (i3)[https://i3wm.org/]
+    (fish)[https://fishshell.com/]
 
 # Installation
 
