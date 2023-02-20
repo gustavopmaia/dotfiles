@@ -18,13 +18,38 @@ cmp.setup({
 		}),
 	}),
 	sources = cmp.config.sources({
+		{ name = 'path' },
+		{ name = 'nvim_lsp_signature_help' },
+		{ name = 'nvim_lua' },
+		{ name = 'calc' },
 		{ name = 'nvim_lsp' },
 		{ name = 'vsnip' },
 		{ name = 'buffer' }
 	}),
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
+	},
+	formatting = {
+		fields = { 'menu', 'abbr', 'kind' },
+		format = function(entry, item)
+			local menu_icon = {
+				nvim_lsp = 'λ',
+				vsnip = '⋗',
+				buffer = 'Ω',
+				path = '🖫',
+			}
+			item.meny = menu_icon[entry.source.name]
+			return item
+		end,
+	}
 })
 
-vim.cmd [[
-	set completeopt=menuone,noinsert,noselect
-	highlight! default link CmpItemKind CmpItemMenuDefault
-]]
+vim.opt.completeopt = { 'menuone', 'noselect', 'noinsert' }
+vim.opt.shortmess = vim.opt.shortmess + { c = true }
+vim.api.nvim_set_option('updatetime', 300)
+
+vim.cmd([[
+set signcolumn=yes
+autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
+]])

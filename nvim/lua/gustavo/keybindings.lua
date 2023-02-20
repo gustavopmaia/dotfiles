@@ -7,3 +7,4 @@ local keymap = vim.api.nvim_set_keymap
 
 keymap("n", "<C-b>", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<C-f>", ":Telescope find_files<cr>", opts)
+keymap("n", "<C-j>", ":TermExec cmd=''", opts)
