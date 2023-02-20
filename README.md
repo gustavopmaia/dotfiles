@@ -37,7 +37,7 @@ The **\`kitty.conf\`** file contains configuration for kitty, a modern terminal 
 
 #### nvim
 
-The **\`init.vim\`** file contains configuration for nvim, a modern text editor. It includes various plugins for language support, as well as settings for the user interface and key bindings.
+The **\`init.lua\`** file contains configuration for nvim, a modern text editor. It includes various plugins for language support, as well as settings for the user interface and key bindings.
 
 #### i3
 
